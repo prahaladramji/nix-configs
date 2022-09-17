@@ -23,6 +23,7 @@
       kubecfg
       kubectl
       kubectx
+      lego
       moreutils
       nixfmt
       unstable.open-policy-agent
