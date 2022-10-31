@@ -24,8 +24,11 @@
     userSettings = {
       "[nix]"."editor.tabSize" = 2;
       "editor.formatOnSave" = true;
+      "extensions.autoCheckUpdates" = false;
+      "extensions.autoUpdate" = false;
       "files.autoSave" = "onFocusChange";
       "workbench.startupEditor" = "none";
+      "update.mode" = "none";
     };
   };
 }
