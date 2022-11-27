@@ -27,6 +27,7 @@
       "extensions.autoCheckUpdates" = false;
       "extensions.autoUpdate" = false;
       "files.autoSave" = "onFocusChange";
+      "go.toolsManagement.autoUpdate" = true;
       "workbench.startupEditor" = "none";
       "update.mode" = "none";
     };
