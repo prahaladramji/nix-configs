@@ -8,6 +8,7 @@
       bazel_5
       coreutils
       cue
+      curl
       unstable.docker-compose
       fd
       gh
