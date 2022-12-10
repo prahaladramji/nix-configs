@@ -2,9 +2,6 @@
   imports = [
     ../applications
 
-    # Darwin specific modules
-    ./darwin.nix
-
     # Common Overrides
     ../overrides/git.nix
     ../overrides/ssh.nix

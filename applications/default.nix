@@ -28,9 +28,10 @@
       moreutils
       nixfmt
       unstable.open-policy-agent
+      pipenv
       pre-commit
       protobuf
-      (python310.withPackages (p: with p; [ requests pre-commit-hooks ]))
+      (python310.withPackages (p: with p; [ pre-commit-hooks requests ]))
       (ripgrep.override { withPCRE2 = true; })
       rsync
       source-code-pro

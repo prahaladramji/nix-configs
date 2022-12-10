@@ -37,6 +37,7 @@
       ${lib.optionalString pkgs.stdenv.hostPlatform.isDarwin ''
         eval $(/opt/homebrew/bin/brew shellenv)
       ''}
+      export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
       export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$GOBIN:$PATH"
     '';
 

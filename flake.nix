@@ -2,11 +2,11 @@
   description = "Nix System configs";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/release-22.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-22.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-22.05";
+      url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,25 +22,32 @@
       pkgsConfig = {
         nixpkgs.config = { allowUnfreePredicate = (pkg: true); };
         nixpkgs.overlays = [ overlay-unstable ];
+        home.stateVersion = "22.11";
       };
 
       commonModules = [ ./modules ] ++ [ pkgsConfig ];
 
       workSystem = home-manager.lib.homeManagerConfiguration {
-        configuration.imports = commonModules;
-        system = "aarch64-darwin";
-        homeDirectory = "/Users/prahalad";
-        username = "prahalad";
-        stateVersion = "22.05";
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        modules = commonModules ++ [{
+          home = {
+            username = "prahalad";
+            homeDirectory = "/Users/prahalad";
+          };
+        }];
       };
 
       chromeOSSystem = home-manager.lib.homeManagerConfiguration {
-        configuration.imports = commonModules
-          ++ [ ./modules/chromeos.debian.nix ];
-        system = "x86_64-linux";
-        homeDirectory = "/home/pramji";
-        username = "pramji";
-        stateVersion = "22.05";
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = commonModules ++ [
+          ./modules/chromeos.debian.nix
+          {
+            home = {
+              username = "pramji";
+              homeDirectory = "/home/pramji";
+            };
+          }
+        ];
       };
     in {
       work = workSystem.activationPackage;
