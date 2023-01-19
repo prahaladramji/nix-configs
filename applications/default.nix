@@ -35,6 +35,7 @@
       (ripgrep.override { withPCRE2 = true; })
       rsync
       source-code-pro
+      ssm-session-manager-plugin
       unstable.step-cli
       stow
       unstable.terraform
