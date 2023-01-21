@@ -1,9 +1,14 @@
 {
   home.file = {
+    ".ssh/config.d/00-1password".text = ''
+      HOST *
+        IdentityAgent "~/.1password/agent.sock"
+    '';
+
     ".ssh/config.d/00-aws".text = ''
       HOST i-* mi-*
-      ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
-      User ec2-user
+        ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+        User ec2-user
     '';
 
     ".ssh/config.d/00-home".text = ''
