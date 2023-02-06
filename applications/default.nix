@@ -9,6 +9,7 @@
       coreutils
       cue
       curl
+      discord
       unstable.docker-compose
       fd
       gh
