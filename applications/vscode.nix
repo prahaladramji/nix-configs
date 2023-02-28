@@ -14,12 +14,20 @@
         ms-azuretools.vscode-docker
         ms-python.python
         ms-python.vscode-pylance
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
-        name = "vscode-cuelang";
-        publisher = "brody715";
-        version = "0.0.4";
-        sha256 = "g/xYOvo98A5kqDG3hGtfWC+Ap0JULo8I0ruTtNXpt1o=";
-      }];
+      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "runonsave";
+          publisher = "emeraldwalk";
+          version = "0.2.0";
+          sha256 = "nPm9bTEnNHzb5omGoEh0e8Wp+XTLW2UTtr/OuSBd99g=";
+        }
+        {
+          name = "cuelang";
+          publisher = "nickgo";
+          version = "0.0.1";
+          sha256 = "dAMV1SQUSuq2nze5us6/x1DGYvxzFz3021++ffQoafI=";
+        }
+      ];
 
     userSettings = {
       "[nix]"."editor.tabSize" = 2;
@@ -28,8 +36,13 @@
       "extensions.autoUpdate" = false;
       "files.autoSave" = "onFocusChange";
       "go.toolsManagement.autoUpdate" = true;
-      "workbench.startupEditor" = "none";
       "update.mode" = "none";
+      "workbench.startupEditor" = "none";
+      "[python]"."editor.formatOnType" = true;
+      "emeraldwalk.runonsave"."commands" = [{
+        "match" = "\\.cue$";
+        "cmd" = "cue fmt -s \${file}";
+      }];
     };
   };
 }
