@@ -25,7 +25,11 @@
 
     # doomemacs checks for gls on a mac.
     "bin/gls" = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
-      source = config.lib.file.mkOutOfStoreSymlink "${pkgs.coreutils}/bin/ls";
+      executable = true;
+      text = ''
+        #!/usr/bin/env zsh
+        ${pkgs.coreutils}/bin/ls "$@"
+      '';
     };
   };
 }
