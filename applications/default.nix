@@ -6,6 +6,7 @@
       argocd
       awscli2
       bazel_5
+      unstable.colordiff
       coreutils
       cue
       curl
