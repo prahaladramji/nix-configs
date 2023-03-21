@@ -87,3 +87,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(after! persistent-scratch
+      (persistent-scratch-setup-default)
+      (setq persistent-scratch-mode t
+            persistent-scratch-autosave-mode t))

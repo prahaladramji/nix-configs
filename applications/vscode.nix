@@ -11,6 +11,7 @@
         editorconfig.editorconfig
         hashicorp.terraform
         golang.go
+        mattn.lisp
         ms-azuretools.vscode-docker
         ms-python.python
         ms-python.vscode-pylance
