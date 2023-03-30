@@ -21,6 +21,7 @@
       htop
       kubernetes-helm
       jq
+      jsonnet-language-server
       k9s
       kind
       kubecfg

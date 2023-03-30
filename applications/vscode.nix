@@ -28,6 +28,18 @@
           version = "0.0.1";
           sha256 = "dAMV1SQUSuq2nze5us6/x1DGYvxzFz3021++ffQoafI=";
         }
+        {
+          name = "hcl";
+          publisher = "hashicorp";
+          version = "0.3.2";
+          sha256 = "cxF3knYY29PvT3rkRS8SGxMn9vzt56wwBXpk2PqO0mo=";
+        }
+        {
+          name = "vscode-jsonnet";
+          publisher = "grafana";
+          version = "0.3.3";
+          sha256 = "xUS+5WBLP4tTIY5thXcI6yysQ1ACOiyeGpgM9AhlDjI=";
+        }
       ];
 
     userSettings = {
