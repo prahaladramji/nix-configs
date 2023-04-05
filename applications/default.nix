@@ -38,6 +38,7 @@
       rsync
       source-code-pro
       ssm-session-manager-plugin
+      unstable.steampipe
       unstable.step-cli
       stow
       unstable.terraform
