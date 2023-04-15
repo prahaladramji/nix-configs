@@ -8,7 +8,7 @@
       bazel_5
       unstable.colordiff
       coreutils
-      cue
+      unstable.cue
       curl
       discord
       unstable.docker-compose
@@ -115,7 +115,7 @@
 
     go = {
       enable = true;
-      package = pkgs.unstable.go_1_19;
+      package = pkgs.unstable.go_1_20;
       goPath = "go";
       goBin = "go/bin";
     };
