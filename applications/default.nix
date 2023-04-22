@@ -3,6 +3,7 @@
 
   home.packages = with pkgs;
     [
+      unstable._1password
       argocd
       awscli2
       bazel_5
