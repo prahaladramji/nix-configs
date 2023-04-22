@@ -20,7 +20,6 @@
       };
 
       pkgsConfig = {
-        nixpkgs.config = { allowUnfreePredicate = (pkg: true); };
         nixpkgs.overlays = [ overlay-unstable ];
         home.stateVersion = "22.11";
       };
