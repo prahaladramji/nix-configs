@@ -30,6 +30,7 @@
       lego
       moreutils
       nixfmt
+      unstable.open-policy-agent
       pipenv
       unstable.pre-commit
       protobuf
@@ -48,13 +49,7 @@
       wget
       whois
       yq-go
-    ] ++ lib.optionals stdenv.isLinux [
-      bc
-      dig
-      unstable.open-policy-agent
-      signal-desktop
-      sublime-merge
-    ];
+    ] ++ lib.optionals stdenv.isLinux [ bc dig signal-desktop sublime-merge ];
 
   programs = {
     alacritty = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
