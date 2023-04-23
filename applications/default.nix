@@ -41,6 +41,7 @@
       source-code-pro
       ssm-session-manager-plugin
       unstable.steampipe
+      unstable.step-ca
       unstable.step-cli
       stow
       unstable.terraform
