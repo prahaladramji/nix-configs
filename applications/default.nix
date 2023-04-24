@@ -3,7 +3,6 @@
 
   home.packages = with pkgs;
     [
-      unstable._1password
       argocd
       awscli2
       bazel_5
@@ -51,7 +50,13 @@
       wget
       whois
       yq-go
-    ] ++ lib.optionals stdenv.isLinux [ bc dig signal-desktop sublime-merge ];
+    ] ++ lib.optionals stdenv.isLinux [
+      unstable._1password
+      bc
+      dig
+      signal-desktop
+      sublime-merge
+    ];
 
   programs = {
     alacritty = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
