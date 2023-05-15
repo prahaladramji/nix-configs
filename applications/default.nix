@@ -1,17 +1,17 @@
 { lib, pkgs, ... }: {
   imports = [ ./emacs ./git.nix ./gpg.nix ./ssh.nix ./tmux ./vscode.nix ./zsh ];
 
-  home.packages = with pkgs;
+  home.packages = with pkgs.unstable;
     [
       argocd
       awscli2
-      bazel_5
-      unstable.colordiff
+      bazel
+      colordiff
       coreutils
-      unstable.cue
+      cue
       curl
       discord
-      unstable.docker-compose
+      docker-compose
       fd
       gh
       gnumake
@@ -30,20 +30,20 @@
       lego
       moreutils
       nixfmt
-      unstable.open-policy-agent
+      open-policy-agent
       pipenv
-      unstable.pre-commit
+      pre-commit
       protobuf
       (python310.withPackages (p: with p; [ pre-commit-hooks requests ]))
       (ripgrep.override { withPCRE2 = true; })
       rsync
       source-code-pro
       ssm-session-manager-plugin
-      unstable.steampipe
-      unstable.step-ca
-      unstable.step-cli
+      steampipe
+      step-ca
+      step-cli
       stow
-      unstable.terraform
+      terraform
       terraform-docs
       tree
       vault
@@ -51,7 +51,7 @@
       whois
       yq-go
     ] ++ lib.optionals stdenv.isLinux [
-      unstable._1password
+      _1password
       bc
       dig
       signal-desktop
