@@ -24,6 +24,7 @@
       jsonnet-language-server
       k9s
       kind
+      kubebuilder
       kubecfg
       kubectl
       kubectx
