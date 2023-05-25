@@ -9,7 +9,7 @@
       colordiff
       coreutils
       cue
-      curl
+      curlHTTP3
       discord
       docker-compose
       fd
