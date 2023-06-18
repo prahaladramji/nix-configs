@@ -64,10 +64,16 @@
       "update.mode" = "none";
       "workbench.startupEditor" = "none";
       "[python]"."editor.formatOnType" = true;
-      "emeraldwalk.runonsave"."commands" = [{
-        "match" = "\\.cue$";
-        "cmd" = "cue fmt -s \${file}";
-      }];
+      "emeraldwalk.runonsave"."commands" = [
+        {
+          "cmd" = "cue fmt -s \${file}";
+          "match" = "\\.cue$";
+        }
+        {
+          "cmd" = "kcl-fmt \${file}";
+          "match" = "\\.k$";
+        }
+      ];
     };
   };
 }
