@@ -103,6 +103,16 @@
             mods = "Alt";
             chars = "\\x1BB";
           }
+          {
+            key = "Key1";
+            mods = "Alt";
+            chars = "\\x1B1";
+          }
+          {
+            key = "Key2";
+            mods = "Alt";
+            chars = "\\x1B2";
+          }
         ];
       };
     };
