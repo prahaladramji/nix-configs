@@ -3,7 +3,8 @@
 {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions;
+    package = pkgs.unstable.vscode;
+    extensions = with pkgs.unstable.vscode-extensions;
       [
         bbenoist.nix
         brettm12345.nixfmt-vscode
