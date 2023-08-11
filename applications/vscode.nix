@@ -57,14 +57,8 @@
 
     userSettings = {
       "[nix]"."editor.tabSize" = 2;
-      "editor.formatOnSave" = true;
-      "extensions.autoCheckUpdates" = false;
-      "extensions.autoUpdate" = false;
-      "files.autoSave" = "onFocusChange";
-      "go.toolsManagement.autoUpdate" = true;
-      "update.mode" = "none";
-      "workbench.startupEditor" = "none";
       "[python]"."editor.formatOnType" = true;
+      "editor.formatOnSave" = true;
       "emeraldwalk.runonsave"."commands" = [
         {
           "cmd" = "cue fmt -s \${file}";
@@ -75,6 +69,13 @@
           "match" = "\\.k$";
         }
       ];
+      "extensions.autoCheckUpdates" = false;
+      "extensions.autoUpdate" = false;
+      "files.autoSave" = "onFocusChange";
+      "git.autofetch" = true;
+      "go.toolsManagement.autoUpdate" = true;
+      "update.mode" = "none";
+      "workbench.startupEditor" = "none";
     };
   };
 }
