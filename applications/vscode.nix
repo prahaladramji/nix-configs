@@ -4,7 +4,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.unstable.vscode;
-    extensions = with pkgs.vscode-extensions;
+    extensions = with pkgs.unstable.vscode-extensions;
       [
         bbenoist.nix
         brettm12345.nixfmt-vscode
@@ -44,8 +44,8 @@
         {
           name = "kusion";
           publisher = "kusionstack";
-          version = "0.0.18";
-          sha256 = "48mCoA6z2o4NnvQZvelE82Cm7PjptRHlLNZbr2ASff8=";
+          version = "0.0.20";
+          sha256 = "D9Eq2szXc87QJXSGkt09FGnHud+V6GpvFILAEoFp21M=";
         }
         {
           name = "vscode-jsonnet";
