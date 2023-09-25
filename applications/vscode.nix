@@ -50,8 +50,8 @@
         {
           name = "vscode-jsonnet";
           publisher = "grafana";
-          version = "0.3.3";
-          sha256 = "xUS+5WBLP4tTIY5thXcI6yysQ1ACOiyeGpgM9AhlDjI=";
+          version = "0.4.1";
+          sha256 = "5NNONMRL4at7FwUPBRhPrNWExHtzuK3US0HHn+XeeXw=";
         }
       ];
 
