@@ -153,7 +153,7 @@
 
     go = {
       enable = true;
-      package = pkgs.unstable.go_1_20;
+      package = pkgs.unstable.go_1_21;
       goPath = "go";
       goBin = "go/bin";
     };
