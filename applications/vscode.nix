@@ -59,6 +59,16 @@
       "[nix]"."editor.tabSize" = 2;
       "[python]"."editor.formatOnType" = true;
       "editor.formatOnSave" = true;
+      "editor.rulers" = [
+        {
+          "column" = 80;
+          "color" = "#5a5a5a80";
+        }
+        {
+          "column" = 120;
+          "color" = "#5a5a5a40";
+        }
+      ];
       "emeraldwalk.runonsave"."commands" = [
         {
           "cmd" = "cue fmt -s \${file}";
