@@ -11,6 +11,7 @@
         eamodio.gitlens
         editorconfig.editorconfig
         hashicorp.terraform
+        github.copilot
         golang.go
         mattn.lisp
         ms-azuretools.vscode-docker
@@ -83,6 +84,11 @@
       "extensions.autoUpdate" = false;
       "files.autoSave" = "onFocusChange";
       "git.autofetch" = true;
+      "github.copilot.enable" = {
+        "*" = "true";
+        "plaintext" = true;
+        "scminput" = false;
+      };
       "go.toolsManagement.autoUpdate" = true;
       "update.mode" = "none";
       "workbench.startupEditor" = "none";
