@@ -35,7 +35,7 @@
       poetry
       pre-commit
       protobuf
-      (python310.withPackages (p: with p; [ pre-commit-hooks requests ]))
+      (python311.withPackages (p: with p; [ pre-commit-hooks requests pyyaml ]))
       (ripgrep.override { withPCRE2 = true; })
       rsync
       sshuttle
