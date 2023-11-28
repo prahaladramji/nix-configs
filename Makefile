@@ -7,7 +7,7 @@ help: ## show help messages.
 	@egrep '^(.+)\:\ ##\ (.+)' $(MAKEFILE_LIST) | column -t -c 2 -s ':#'
 
 build: ## builds the changes only.
-	@NIXPKGS_ALLOW_UNFREE=1 nix build --no-link --impure
+	@NIXPKGS_ALLOW_UNFREE=1 nix --print-build-logs build -vvv --no-link --impure
 
 activate: ## activate the previously created build.
 	@$$(NIXPKGS_ALLOW_UNFREE=1 nix path-info --impure)/activate

@@ -1,63 +1,66 @@
 { lib, pkgs, ... }: {
   imports = [ ./emacs ./git.nix ./gpg.nix ./ssh.nix ./tmux ./vscode.nix ./zsh ];
 
-  home.packages = with pkgs.unstable;
+  home.packages = with pkgs;
     [
-      argocd
-      awscli2
-      bazel
-      colordiff
-      coreutils
-      cue
-      curlHTTP3
-      discord
-      docker-compose
-      fd
-      gh
-      gnumake
-      go-jsonnet
-      google-cloud-sdk
-      grpcurl
-      htop
-      kubernetes-helm
-      jq
-      jsonnet-language-server
-      k9s
-      kind
-      kubebuilder
-      kubecfg
-      kubectl
-      kubectx
-      lego
-      moreutils
-      nixfmt
-      open-policy-agent
-      poetry
-      pre-commit
-      protobuf
-      (python311.withPackages (p: with p; [ pre-commit-hooks requests pyyaml ]))
-      (ripgrep.override { withPCRE2 = true; })
-      rsync
-      sshuttle
-      source-code-pro
-      ssm-session-manager-plugin
-      steampipe
-      step-ca
-      step-cli
-      stow
-      terraform
-      terraform-docs
-      tree
-      vault
-      wget
-      whois
-      yq-go
+      unstable.argocd
+      unstable.awscli2
+      unstable.bazel
+      unstable.colordiff
+      unstable.coreutils
+      unstable.cue
+      unstable.curlHTTP3
+      unstable.discord
+      unstable.docker-compose
+      unstable.fd
+      unstable.gh
+      unstable.gnumake
+      unstable.go-jsonnet
+      unstable.google-cloud-sdk
+      unstable.grpcurl
+      unstable.htop
+      unstable.kubernetes-helm
+      unstable.jq
+      unstable.jsonnet-language-server
+      unstable.k9s
+      unstable.kind
+      unstable.kubebuilder
+      unstable.kubecfg
+      unstable.kubectl
+      unstable.kubectx
+      unstable.lego
+      unstable.moreutils
+      unstable.nixfmt
+      unstable.open-policy-agent
+      unstable.poetry
+      unstable.pre-commit
+      unstable.protobuf
+      (unstable.python311.withPackages
+        (p: with p; [ pre-commit-hooks requests pyyaml ]))
+      (unstable.ripgrep.override { withPCRE2 = true; })
+      unstable.rsync
+      unstable.sshuttle
+      unstable.source-code-pro
+      unstable.ssm-session-manager-plugin
+      unstable.steampipe
+      unstable.step-ca
+      unstable.step-cli
+      unstable.stow
+      unstable.terraform
+      unstable.terraform-docs
+      unstable.tree
+      unstable.vault
+      unstable.wget
+      unstable.yq-go
     ] ++ lib.optionals stdenv.isLinux [
-      _1password
-      bc
-      dig
-      signal-desktop
-      sublime-merge
+      unstable._1password
+      unstable.bc
+      unstable.dig
+      unstable.signal-desktop
+      unstable.sublime-merge
+    ] ++ [
+      # stable packages only
+      whois
     ];
 
   programs = {
