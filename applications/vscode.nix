@@ -39,8 +39,8 @@
         {
           name = "kcl-vscode-extension";
           publisher = "kcl";
-          version = "0.1.0";
-          sha256 = "w96ZQahxxzGCM8wTUG2Es2IGNm0QTgi+OnHxS2rVWOE=";
+          version = "0.1.3";
+          sha256 = "tp26RXL8HCRWCw2y10oaQNhRd6eRyWkyS/A8Rb0bQjk=";
         }
         {
           name = "kusion";
@@ -51,8 +51,8 @@
         {
           name = "vscode-jsonnet";
           publisher = "grafana";
-          version = "0.4.1";
-          sha256 = "5NNONMRL4at7FwUPBRhPrNWExHtzuK3US0HHn+XeeXw=";
+          version = "0.5.1";
+          sha256 = "qYB5kn/5qAcILywjzaLILxklBJVhSgQSX3rYNCOKvPE=";
         }
       ];
 
