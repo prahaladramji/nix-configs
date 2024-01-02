@@ -22,7 +22,7 @@
       unstable.kubernetes-helm
       unstable.jq
       unstable.jsonnet-language-server
-      k9s
+      unstable.k9s
       unstable.kind
       unstable.kubebuilder
       unstable.kubecfg
