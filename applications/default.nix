@@ -13,6 +13,7 @@
       unstable.discord
       unstable.docker-compose
       unstable.fd
+      unstable.fzf
       unstable.gh
       unstable.gnumake
       unstable.go-jsonnet
