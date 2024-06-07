@@ -36,7 +36,7 @@
       unstable.poetry
       unstable.pre-commit
       unstable.protobuf
-      (unstable.python311.withPackages
+      (unstable.python312.withPackages
         (p: with p; [ pre-commit-hooks requests pyyaml ]))
       (unstable.ripgrep.override { withPCRE2 = true; })
       unstable.rsync
