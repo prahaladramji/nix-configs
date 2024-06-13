@@ -158,7 +158,7 @@
 
     go = {
       enable = true;
-      package = pkgs.unstable.go_1_21;
+      package = pkgs.unstable.go;
       goPath = "go";
       goBin = "go/bin";
     };
