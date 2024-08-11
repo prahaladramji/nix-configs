@@ -33,14 +33,14 @@
         {
           name = "hcl";
           publisher = "hashicorp";
-          version = "0.3.2";
-          sha256 = "cxF3knYY29PvT3rkRS8SGxMn9vzt56wwBXpk2PqO0mo=";
+          version = "0.5.0";
+          sha256 = "CfyTSJCMTIKDVyvE7J9FKQfXKrwQCOMoBR920CMoBOM=";
         }
         {
           name = "kcl-vscode-extension";
           publisher = "kcl";
-          version = "0.1.3";
-          sha256 = "tp26RXL8HCRWCw2y10oaQNhRd6eRyWkyS/A8Rb0bQjk=";
+          version = "0.2.2";
+          sha256 = "iMRIe9IoVebu4KwIYw/558FPBL/NdDNDUy1le1luif8=";
         }
         {
           name = "kusion";
